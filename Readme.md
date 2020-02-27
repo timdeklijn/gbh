@@ -30,6 +30,7 @@ python start.py --dataprep
 python start.py --train
 ```
 
+- (re) Training code is based on [this](https://colab.research.google.com/github/tensorflow/hub/blob/master/examples/colab/tf2_image_retraining.ipynb#scrollTo=QzW4oNRjILaq)
 - [x] Load train set:
     - [x] Based on whale image list, simply load the images and their associated label
 - [x] Download a deep learning model
