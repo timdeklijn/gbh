@@ -1,0 +1,9 @@
+venv/
+image_augmentation/
+train/
+*.png
+*.csv
+*.pyc
+augment/
+.vscode/
+WhaleWhaleWhale/
