@@ -37,6 +37,9 @@ python start.py --train
 - [x] Retrain a deep learning image classification model
 - [x] The output of the model should be a list of probabilities for each whale ID.
 - [ ] Runs on GPU
+- [ ] Add checkpoints
+- [ ] Better train/test split
+- [ ] Save label binarizer for inference
 
 ## Create output
 
@@ -49,6 +52,7 @@ python start.py --predict
     - [ ] Per image get a vector of probabilities per whale
     - [ ] per image return file names of images belonging to a certain whale
     - [ ] Put file names with highest probabilities on position 1,2,3 and 20
+- [ ] Convert output to whale ID + probability
 
 ## TODO
 
@@ -59,3 +63,4 @@ python start.py --predict
 
 - [ ] tensorboard
 - [ ] MLFlow
+- [ ] Increase number of images even more
