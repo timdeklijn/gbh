@@ -6,7 +6,7 @@ Clone and install this image_augmentation package:
 
 ```sh
 git clone https://github.com/timdeklijn/image_augmentation
-cd image augmentation/im_augment && pip install . && cd ../..
+cd image_augmentation/im_augment && pip install . && cd ../..
 pip install -r requirements.txt
 ```
 
