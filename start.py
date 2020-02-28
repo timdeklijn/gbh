@@ -8,6 +8,19 @@ from predict import predict
 if __name__ == "__main__":
     print("[LOG] ~GAPING BLOWHOLE~ WHALE IDENTIFICATION")
 
+    print("""
+  .-------------'```'----....,,__                        _,
+  |                               `'`'`'`'-.,.__        .'(
+  |                                             `'--._.'   )
+  |                                                   `'-.<
+  \               .-'`'-.                            -.    `\\
+   \               -.o_.     _                     _,-'`\    |
+    ``````''--.._.-=-._    .'  \            _,,--'`      `-._(
+      (^^^^^^^^`___    '-. |    \  __,,..--'                 `
+       `````````   `'--..___\    |`
+                             `-.,' 
+""")
+
     print("[LOG] Parsing command line arguments")
     parser = argparse.ArgumentParser(description="Gaping Blowhol Hackathon Logic")
     parser.add_argument(
