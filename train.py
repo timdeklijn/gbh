@@ -75,6 +75,9 @@ def train_model():
     lb = LabelBinarizer()
     y = lb.fit_transform(labels)  # Convert labels to one hot encoded labels
     # TODO: split train_test, but for now this is sort of happening in validation_split?
+    # TODO: Make sure that only original images are put into the test set? so maybe do
+    #       this before aumenting the images then.
+    # TODO: save the label binarizer to get back the whale ID after predicitons
 
     print("[LOG] Building model with", MODULE_HANDLE)
     model = tf.keras.Sequential(
@@ -96,11 +99,11 @@ def train_model():
         metrics=["accuracy"],
     )
     print("[LOG] Start Training")
-    # TODO: add checkpoints
+    # TODO: add checkpoints, save every N epochs.
     hist = model.fit(
-        X, y, validation_split=0.15, batch_size=BATCH_SIZE, epochs=20, verbose=1
+        X, y, validation_split=0.15, batch_size=BATCH_SIZE, epochs=100, verbose=1
     )
     print("[LOG] Plotting metrics")
     output_training_metrics(hist.history)
     print("[LOG] Saving model")
-    model.save(model, "WhaleWhaleWhale")
+    model.save("WhaleWhaleWhale")
