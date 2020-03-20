@@ -96,7 +96,7 @@ def preprocess_images():
         shutil.rmtree("augment")
     os.makedirs("augment")  # Create new augmentation folder
     # For all whales check if there is enough images, if not create extra
-    for w in whale_list[:10]:
+    for w in whale_list[:10]:  # TODO: remove 10
         tmp = []
         n = 0
         # If there is not enough images

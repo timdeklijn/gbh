@@ -72,7 +72,7 @@ def train_model():
     X = np.array(
         [np.array(load_img(f, target_size=IMAGE_SIZE)) / 255.0 for f in fnames]
     )  # load and preprocess images
-    lb = LabelBinarizer()
+    lb = LabelBinarizer()  # Save this!!!
     y = lb.fit_transform(labels)  # Convert labels to one hot encoded labels
     # TODO: split train_test, but for now this is sort of happening in validation_split?
     # TODO: Make sure that only original images are put into the test set? so maybe do
@@ -98,8 +98,24 @@ def train_model():
         loss=tf.keras.losses.CategoricalCrossentropy(label_smoothing=0.1),
         metrics=["accuracy"],
     )
-    print("[LOG] Start Training")
     # TODO: add checkpoints, save every N epochs.
+    #
+    # From Monica:
+    # EPOCH_BLOCK = 10
+    # N_EPOCH_BLOCKS = 10
+    # for i in range(N_EPOCH_BLOCKS):
+    #     epoch_start = i * EPOCH_BLOCK
+    #     hist = model.fit(
+    #         X, y, validation_split=0.15, batch_size=BATCH_SIZE, epochs=epoch_start + EPOCH_BLOCK, verbose=1,
+    #         initial_epoch=epoch_start
+    #     )
+    # model.save_weights("weights")
+
+    # TODO: add generator, we can not have all images in memory
+    # Dang-Khoa:
+    #   https://medium.com/@anuj_shah/creating-custom-data-generator-for-training-deep-learning-models-part-2-be9ad08f3f0e 
+    #
+    print("[LOG] Start Training")
     hist = model.fit(
         X, y, validation_split=0.15, batch_size=BATCH_SIZE, epochs=100, verbose=1
     )
