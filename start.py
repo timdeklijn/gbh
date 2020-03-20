@@ -22,7 +22,7 @@ if __name__ == "__main__":
 """)
 
     print("[LOG] Parsing command line arguments")
-    parser = argparse.ArgumentParser(description="Gaping Blowhol Hackathon Logic")
+    parser = argparse.ArgumentParser(description="Gaping Blowhole Hackathon Logic")
     parser.add_argument(
         "--dataprep", help="Start data preparation", action="store_true"
     )

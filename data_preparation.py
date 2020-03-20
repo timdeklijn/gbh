@@ -117,7 +117,7 @@ def preprocess_images():
             f.write(w.output_line() + "\n")
 
 
-# Lorrie: potential start for cropping and masking images:
+## Lorrie: potential start for cropping and masking images:
 
 # def crop(PATH):
     # '''
@@ -143,7 +143,7 @@ def preprocess_images():
 #     if v < h/h_factor:
 #         fill_length = int(abs(h/h_factor-v)*0.5)#np.random.rand()) # for upper filling
 
-          # black rectangle for upper filling
+#         # black rectangle for upper filling
 #         fill = np.zeros(fill_length* h).reshape(fill_length, h)
 
 #         canny_edges = np.r_[fill,canny_edges,fill] # fill with black rectangle
